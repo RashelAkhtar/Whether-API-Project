@@ -7,6 +7,7 @@ const port = 3000;
 const url = "https://api.openweathermap.org/data/2.5/weather";
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.render("index.ejs", {
