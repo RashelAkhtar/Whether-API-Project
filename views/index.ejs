@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wether-API</title>
+  </head>
+  <body>
+    <h1>Wether-API</h1>
+    <form action="/submit" method="post">
+      <h3>Enter the longitude</h3>
+      <input type="text" name="longitude" class="longitude" />
+      <h3>Enter the latitude</h3>
+      <input type="text" name="latitude" class="latitude" />
+      <button class="submitBtn">Submit</button>
+    </form>
+
+    <!-- temp_data -->
+    <% if (locals.temp_data) { %>
+    <p>Temperature: <%= temp_data %></p>
+    <% } %>
+
+    <!-- humidity_data -->
+    <% if (locals.humidity_data) { %>
+    <p>Humidity: <%= humidity_data %></p>
+    <% } %>
+
+    <!-- pressure_data -->
+    <% if (locals.pressure_data) { %>
+    <p>Pressure: <%= pressure_data %></p>
+    <% } %>
+  </body>
+</html>
